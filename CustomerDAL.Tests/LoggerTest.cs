@@ -25,11 +25,10 @@ namespace CustomerDAL.Tests
         }
 
         [TestCase(1, ExpectedResult = true)]
-        [TestCase("a", ExpectedResult = false)]
-        public bool InsertLogID(int logid)
+        public bool InsertLogID(int userid)
         {
             CustLogInfo c = new CustLogInfo();
-            c.LogID = logid;
+            c.UserID = userid;
             return v.Insert(c);
         }
     }
